@@ -5,7 +5,7 @@
     <p class="headerstyle"> LogIn</p>
 <form #loginRef="ngForm" (ngSubmit)="submit(loginRef)">
     <span>User email</span>
-    <input class="w3-input w3-border w3-hover-blue " type=text name="useremail" pattern="[A-Za-z0-9._%+-]*(@test.com|@hcl.com)" placeholder="enter user email" [(ngModel)]="model.useremail" 
+    <input class="w3-input w3-border w3-hover-blue " type=text name="useremail" pattern="[A-Za-z0-9._%+-]*(@test.com|@abc.com)" placeholder="enter user email" [(ngModel)]="model.useremail" 
     #useremail="ngModel" required />
     <div *ngIf="submitted && useremail.invalid" class ="invalid-field">
       <p *ngIf="useremail.errors.required">  user email  is required</p>
