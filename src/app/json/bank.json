@@ -1,0 +1,109 @@
+{
+  "users": [
+    {
+      "userId": "jalaja2020",
+      "useremail": "jalaja.kumari@hcl.com",
+      "password": "1234",
+      "id": 1
+    },
+    {
+      "userId": "tulasi2020",
+      "useremail": "tulasi@hcl.com",
+      "password": "1234",
+      "id": 2
+    },
+    {
+      "userId": "user12020",
+      "useremail": "user1@hcl.com",
+      "password": "1234",
+      "id": 3
+    }
+  ],
+  "accounts": [
+    {
+      "accountId": "account123",
+      "accountName": "jalaja",
+      "accountBalance": "800",
+      "userId": "jalaja2020",
+      "id": 1
+    },
+    {
+      "accountId": "account124",
+      "accountName": "tulasi",
+      "accountBalance": "5200",
+      "userId": "tulasi2020",
+      "id": 2
+    },
+    {
+      "accountId": "account125",
+      "accountName": "user1",
+      "accountBalance": "5000",
+      "userId": "user12020",
+      "id": 3
+    }
+  ],
+  "beneficiaryAcc": [
+    {
+      "userId": "jalaja2020",
+      "beneficiaryId": "account124",
+      "fromAccountId": "account123",
+      "ifscCode": "IFSC1234",
+      "bankName": "citi bank",
+      "id": 5
+    },
+    {
+      "userId": "jalaja2020",
+      "beneficiaryId": "account124",
+      "fromAccountId": "account123",
+      "ifscCode": "IFSC1234",
+      "bankName": "abc bank",
+      "id": 6
+    },
+    {
+      "userId": "jalaja2020",
+      "beneficiaryId": "account124",
+      "fromAccountId": "account123",
+      "ifscCode": "IFSC1234",
+      "bankName": "abc bank",
+      "id": 7
+    }
+  ],
+  "transHistory": [
+    {
+      "userId": "jalaja2020",
+      "beneficiaryId": "account124",
+      "fromAccountId": "account123",
+      "transType": "debit",
+      "transDate": "2020-06-12T12:59:44.608Z",
+	  "amount":"1234",
+      "id": 3
+    },
+    {
+      "userId": "tulasi2020",
+      "beneficiaryId": "account124",
+      "fromAccountId": "account123",
+      "transType": "credit",
+      "transDate": "2020-06-12T12:59:47.171Z",
+	  "amount":"1234",
+      "id": 4
+    },
+    {
+      "userId": "jalaja2020",
+      "beneficiaryId": "account124",
+      "fromAccountId": "account123",
+      "transType": "debit",
+      "transDate": "2020-06-12T13:23:55.519Z",
+	  "amount":"1234",
+      "id": 5
+    },
+    {
+      "userId": "tulasi2020",
+      "beneficiaryId": "account124",
+      "fromAccountId": "account123",
+      "transType": "credit",
+      "transDate": "2020-06-12T13:23:57.695Z",
+	  "amount":"1234",
+      "id": 6
+    }
+  ]
+}

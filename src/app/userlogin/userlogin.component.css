@@ -1,0 +1,41 @@
+.main{
+    /* background-image: url(../images/login-image.jpg);*/
+    background-color: lightseagreen;
+     margin-left: 320px;
+     margin-right :250px;
+     margin-bottom: 10px;
+     margin-top: 10ox;
+     border-radius: 5px;
+     padding: 20px;
+     font-size: 110%;
+     height: 200px;
+ }
+ .sideright{
+     background-image: url(../images/login-image.jpg);
+     margin-left: 10px;
+     margin-right :10px;
+     margin-bottom: 10px;
+     margin-top: 0ox;
+     border-radius: 5px;
+     padding: 20px;
+     font-size: 110%;
+     float: left;
+     width: 260px;
+     height: 200px;
+     clear: left;
+ }
+ 
+ .sideleft{
+     background-image: url(../images/loginright.JPG);
+     margin-left: 10px;
+     margin-right :10px;
+     margin-bottom: 10px;
+     margin-top: 0ox;
+     border-radius: 5px;
+     padding: 20px;
+     font-size: 110%;
+     float: right;
+     width: 190px;
+     height: 200px;
+     clear: right;
+ }

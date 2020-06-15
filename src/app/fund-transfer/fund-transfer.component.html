@@ -1,0 +1,31 @@
+<div id="navbar">
+    <ul>
+        <li> <a routerLink="/fundtransfer"> Fund Transfer</a></li>
+        <li> <a routerLink="/account"> Account summary</a></li>
+    </ul>
+</div>
+<div class="main">
+    <p class="tableStyle"> FUND TRANSFER </p>
+    <form #fundTranRef="ngForm" (ngSubmit)="submit(fundTranRef)">
+        <span>From account Id</span>
+        <input class="w3-input w3-border w3-hover-blue " type=text name="fromAccountId"
+            placeholder="enter from account Id" [(ngModel)]="model.fromAccountId" #fromAccountId="ngModel" required />
+        <div *ngIf="submitted && fromAccountId.invalid" class="invalid-field">
+            <p *ngIf="fromAccountId.errors.required"> from account id is required</p>
+        </div>
+        <span>Benifiary Id</span>
+        <select class="w3-select w3-border w3-hover-blue" name="benificaryId" [(ngModel)]="model.benificaryId"
+            #benificaryId="ngModel" required>
+            <option *ngFor="let account of beneficiaryInfo;" [value]="account.beneficiaryId">
+                {{account.beneficiaryId}}
+            </option>
+        </select>
+        <span>Amount</span>
+        <input class="w3-input w3-border w3-hover-blue" type=number name="amount" placeholder="enter amount"
+            [(ngModel)]="model.amount" #amount="ngModel" required />
+        <div *ngIf="submitted && amount.invalid" class="invalid-field">
+            <p *ngIf="amount.errors.required"> amount is required</p>
+        </div>
+        <button class="w3-btn w3-blue-grey" type="submit">Submit</button>
+    </form>
+</div>

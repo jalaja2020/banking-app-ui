@@ -1,0 +1,45 @@
+<div id="navbar">
+    <ul>
+        <li> <a routerLink="/fundtransfer"> Fund Transfer</a></li>
+        <li> <a routerLink="/beneficiary"> Add beneficiary</a></li>
+        <li> <a routerLink="/account"> Account summary</a></li>
+    </ul>
+</div>
+<div class="main">
+    <h1 class="tableStyle"> Beneficiary Details</h1>
+
+    <form #beneficiaryRef="ngForm" (ngSubmit)="submit(beneficiaryRef)">
+        <span>User id</span>
+        <input class="w3-input w3-border w3-hover-blue " type=text name="userId" placeholder="enter user id"
+            [(ngModel)]="model.userId" #userId="ngModel" required />
+        <div *ngIf="submitted && userId.invalid" class="invalid-field">
+            <p *ngIf="userId.errors.required"> user id is required</p>
+        </div>
+        <span>Beneficiary Account Id</span>
+        <input class="w3-input w3-border w3-hover-blue" type=text name="beneficiaryId" placeholder="enter beneficiaryId"
+            [(ngModel)]="model.beneficiaryId" #beneficiaryId="ngModel" required />
+        <div *ngIf="submitted && beneficiaryId.invalid" class="invalid-field">
+            <p *ngIf="beneficiaryId.errors.required"> Beneficiary Account id is required</p>
+        </div>
+        <span>Account Id</span>
+        <input class="w3-input w3-border w3-hover-blue" type=text name="fromAccountId" placeholder="enter fromAccountId"
+            [(ngModel)]="model.fromAccountId" #fromAccountId="ngModel" required />
+        <div *ngIf="submitted && fromAccountId.invalid" class="invalid-field">
+            <p *ngIf="fromAccountId.errors.required"> from Account id is required</p>
+        </div>
+
+        <span>Ifsc Code</span>
+        <input class="w3-input w3-border w3-hover-blue" type=text name="ifscCode" placeholder="enter ifsc Code"
+            [(ngModel)]="model.ifscCode" #ifscCode="ngModel" required />
+        <div *ngIf="submitted && ifscCode.invalid" class="invalid-field">
+            <p *ngIf="ifscCode.errors.required"> Ifsc Code is required</p>
+        </div>
+        <span>Bank Name</span>
+        <input class="w3-input w3-border w3-hover-blue" type=text name="bankName" placeholder="enter Bank Name"
+            [(ngModel)]="model.bankName" #bankName="ngModel" required />
+        <div *ngIf="submitted && bankName.invalid" class="invalid-field">
+            <p *ngIf="bankName.errors.required"> bank name is required</p>
+        </div>
+        <button class="w3-btn w3-blue-grey" type="submit">Login</button>
+    </form>
+</div>

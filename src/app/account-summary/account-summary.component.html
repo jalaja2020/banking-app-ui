@@ -1,0 +1,59 @@
+<div id="navbar">
+  <ul>
+    <li> <a routerLink="/fundtransfer"> Fund Transfer</a></li>
+    <li> <a routerLink="/beneficiary"> Add beneficiary</a></li>
+    <li> <a routerLink="/account"> Account summary</a></li>
+  </ul>
+</div>
+<div class="sideright">
+  <p class="headerstyle"> </p>
+  <table border=1>
+    <tr>
+      <td colspan="2">
+        <p class="tableStyle"> Account Summary</p>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        Saving account :
+      </th>
+      <td>{{accountNumber }}</td>
+    </tr>
+    <tr>
+      <th>
+        Balance :
+      </th>
+      <td>{{accountBalance | currency:'INR'}}</td>
+    </tr>
+
+  </table>
+  <span>Statement</span>
+  <button class="nextline w3-btn w3-blue-grey " type="button" (click)="transDetails()">statement</button>
+</div>
+<div class="main">
+  <h1 class="headerstyle">Transaction Details</h1>
+  <table border=1>
+    <thead>
+      <tr>
+        <th>User Id</th>
+        <th>To Account Id</th>
+        <th>From Account Id</th>
+        <th>Transaction Type</th>
+        <th>Amount</th>
+        <th>Transaction Date</th>
+        <th>Transaction Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of selectedTransData">
+        <th>{{ item.userId }}</th>
+        <td>{{ item.beneficiaryId }}</td>
+        <td>{{ item.fromAccountId }}</td>
+        <td>{{ item.transType}}</td>
+        <td>{{ amount | currency:'INR'}}</td>
+        <td>{{ item.transDate  | date: "mediumDate"}}</td>
+        <td>{{ item.transDate  | date: "shortTime"}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

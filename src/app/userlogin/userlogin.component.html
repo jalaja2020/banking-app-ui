@@ -1,0 +1,20 @@
+
+<div class="sideright"></div>
+<div class="sideleft"></div>
+<div class="main">
+    <p class="headerstyle"> LogIn</p>
+<form #loginRef="ngForm" (ngSubmit)="submit(loginRef)">
+    <span>User email</span>
+    <input class="w3-input w3-border w3-hover-blue " type=text name="useremail" pattern="[A-Za-z0-9._%+-]*(@test.com|@hcl.com)" placeholder="enter user email" [(ngModel)]="model.useremail" 
+    #useremail="ngModel" required />
+    <div *ngIf="submitted && useremail.invalid" class ="invalid-field">
+      <p *ngIf="useremail.errors.required">  user email  is required</p>
+    </div>
+    <span>Password</span>
+    <input class="w3-input w3-border w3-hover-blue" type=password name="password" placeholder="enter password" [(ngModel)]="model.password" #password="ngModel" required />
+    <div *ngIf="submitted && password.invalid" class ="invalid-field">
+      <p *ngIf="password.errors.required">  password  is required</p>
+    </div>
+      <button class="w3-btn w3-blue-grey" type="submit">Login</button>
+</form>
+</div>
